@@ -18,7 +18,8 @@ public class intro_ui_functions : MonoBehaviour
         float score = PlayerPrefs.GetFloat("score");
         for(int i=0;i<levels_buttons.Length;i++)
         {
-            levels_buttons[i].GetChild(1).gameObject.SetActive(score <= i * 1000);
+            
+            levels_buttons[i].GetChild(1).gameObject.SetActive(!(score>=i*1000));
         }
     }
     void Discover_Username()
@@ -59,9 +60,18 @@ public class intro_ui_functions : MonoBehaviour
     {
         Application.Quit();
     }
+    public void Load_Main_Panel()
+    {
+        anm.SetTrigger("show_main_panel");
+    }
     public void Realod_Current_Scene()
     {
         var ind = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(ind);
+    }
+    public void Reset_Score_Username()
+    {
+        PlayerPrefs.DeleteAll();
+        Discover_Username();
     }
 }

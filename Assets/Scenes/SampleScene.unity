@@ -2684,7 +2684,7 @@ MonoBehaviour:
   mouseposition: {x: 0, y: 0, z: 0}
   brokenglass: {fileID: 8151204846998732693, guid: c9132cf0ea682b34dbd953654cbddd96, type: 3}
   scoretxt: {fileID: 681844583}
-  multiplier: 0
+  multiplier: 1
   vcount: 0
   canavas: {fileID: 1627444036}
 --- !u!65 &2131650015

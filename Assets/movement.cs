@@ -11,7 +11,7 @@ public class movement : MonoBehaviour
     [SerializeField] GameObject brokenglass;
     [SerializeField] TextMeshProUGUI scoretxt;
     float score;
-    public int multiplier;
+    public int multiplier=1;
     public int vcount;
     float accy;
     [SerializeField] Animator canavas;
